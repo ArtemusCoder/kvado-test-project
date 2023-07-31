@@ -25,3 +25,5 @@
 
 GetBooksByAuthor - поиск книг по автору <br />
 GetAuthorsByBook - поиск авторов по книге
+
+Сервис будет доступен по адресу <code>localhost:8080</code>
