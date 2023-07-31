@@ -1,0 +1,33 @@
+syntax = "proto3";
+option go_package = "github.com/ArtemusCoder/kvado-test-project";
+
+message Author {
+  string name = 1;
+}
+
+message Book {
+  string title = 1;
+}
+
+message GetBooksByAuthorRequest {
+  string name = 1;
+}
+
+message GetBooksByAuthorResponse {
+  repeated Book book = 1;
+}
+
+message GetAuthorsByBookRequest {
+  string title = 1;
+}
+
+message GetAuthorByBookResponse {
+  repeated Author author = 1;
+}
+
+
+service LibraryService {
+  rpc GetBooksByAuthor (GetBooksByAuthorRequest) returns (GetBooksByAuthorResponse) {}
+  rpc GetAuthorsByBook (GetAuthorsByBookRequest) returns (GetAuthorByBookResponse) {}
+}
+
